@@ -662,3 +662,32 @@
   }
 
     }
+/* =========================================================
+   SCROLL REVEAL
+========================================================= */
+
+.rk-leader-hidden {
+
+  opacity:
+    0;
+
+  transform:
+    translateY(45px);
+
+}
+
+
+.rk-leader-visible {
+
+  opacity:
+    1;
+
+  transform:
+    translateY(0);
+
+  transition:
+    opacity 1s ease,
+    transform 1s
+    cubic-bezier(.16,1,.3,1);
+
+}
