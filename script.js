@@ -436,3 +436,57 @@ if (
   });
 
 }
+/* =========================================================
+   ROBOkriti — EVENT 3D INTERACTION
+========================================================= */
+
+const rkEvents = document.querySelectorAll(".rk-event");
+
+if (
+  rkEvents.length &&
+  window.matchMedia("(pointer:fine)").matches
+) {
+
+  rkEvents.forEach((eventCard) => {
+
+    eventCard.addEventListener("mousemove", (event) => {
+
+      const rect =
+        eventCard.getBoundingClientRect();
+
+      const x =
+        event.clientX - rect.left;
+
+      const y =
+        event.clientY - rect.top;
+
+      const centerX =
+        rect.width / 2;
+
+      const centerY =
+        rect.height / 2;
+
+      const rotateX =
+        ((y - centerY) / centerY) * -1.2;
+
+      const rotateY =
+        ((x - centerX) / centerX) * 1.2;
+
+      eventCard.style.transform =
+        `perspective(1200px)
+         rotateX(${rotateX}deg)
+         rotateY(${rotateY}deg)`;
+
+    });
+
+
+    eventCard.addEventListener("mouseleave", () => {
+
+      eventCard.style.transform =
+        "perspective(1200px) rotateX(0deg) rotateY(0deg)";
+
+    });
+
+  });
+
+}
