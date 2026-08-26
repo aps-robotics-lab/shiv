@@ -538,3 +538,67 @@ if (leadershipElements.length) {
   });
 
 }
+/* =========================================================
+   CINEMATIC HERO MOTION
+========================================================= */
+
+const cinematicHero =
+    document.querySelector(".hero");
+
+const cinematicVideo =
+    document.querySelector(".hero-video");
+
+if (
+    cinematicHero &&
+    cinematicVideo &&
+    window.matchMedia("(pointer:fine)").matches
+) {
+
+    cinematicHero.addEventListener(
+        "mousemove",
+        (event) => {
+
+            const rect =
+                cinematicHero.getBoundingClientRect();
+
+            const x =
+                (event.clientX - rect.left) /
+                rect.width;
+
+            const y =
+                (event.clientY - rect.top) /
+                rect.height;
+
+
+            const moveX =
+                (x - .5) * 18;
+
+            const moveY =
+                (y - .5) * 12;
+
+
+            cinematicVideo.style.transform =
+                `
+                translate3d(
+                    ${moveX}px,
+                    ${moveY}px,
+                    0
+                )
+                translateY(-50%)
+                `;
+
+        }
+    );
+
+
+    cinematicHero.addEventListener(
+        "mouseleave",
+        () => {
+
+            cinematicVideo.style.transform =
+                "translateY(-50%)";
+
+        }
+    );
+
+}
