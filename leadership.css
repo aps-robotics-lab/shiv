@@ -1,0 +1,664 @@
+/* =========================================================
+   ROBOkriti 2026
+   Leadership Section
+========================================================= */
+
+.rk-leadership {
+
+  position: relative;
+
+  padding:
+    170px
+    5vw
+    190px;
+
+  background:
+    #090b0d;
+
+  overflow: hidden;
+
+}
+
+
+/* =========================================================
+   TOP LINE
+========================================================= */
+
+.rk-leadership-top {
+
+  max-width:
+    1440px;
+
+  margin:
+    auto;
+
+  display:
+    flex;
+
+  justify-content:
+    space-between;
+
+  padding-bottom:
+    18px;
+
+  border-bottom:
+    1px solid
+    rgba(255,255,255,.08);
+
+}
+
+
+.rk-section-number,
+.rk-section-label {
+
+  font-size:
+    8px;
+
+  letter-spacing:
+    .18em;
+
+}
+
+
+.rk-section-number {
+
+  color:
+    #858c92;
+
+}
+
+
+.rk-section-label {
+
+  color:
+    #d9ff3f;
+
+}
+
+
+/* =========================================================
+   HEADING
+========================================================= */
+
+.rk-leadership-heading {
+
+  max-width:
+    1440px;
+
+  margin:
+    auto;
+
+  padding:
+    85px
+    0
+    70px;
+
+}
+
+
+.rk-leadership-heading p {
+
+  margin-bottom:
+    25px;
+
+  font-size:
+    8px;
+
+  letter-spacing:
+    .18em;
+
+  color:
+    #858c92;
+
+}
+
+
+.rk-leadership-heading h2 {
+
+  max-width:
+    900px;
+
+  font-family:
+    "Space Grotesk",
+    sans-serif;
+
+  font-size:
+    clamp(
+      58px,
+      8vw,
+      115px
+    );
+
+  line-height:
+    .85;
+
+  letter-spacing:
+    -.075em;
+
+  font-weight:
+    600;
+
+}
+
+
+.rk-leadership-heading h2 span {
+
+  color:
+    #737a80;
+
+}
+
+
+/* =========================================================
+   GRID
+========================================================= */
+
+.rk-leadership-grid {
+
+  max-width:
+    1440px;
+
+  margin:
+    auto;
+
+  display:
+    grid;
+
+  grid-template-columns:
+    1fr 1fr;
+
+  border-top:
+    1px solid
+    rgba(255,255,255,.1);
+
+  border-bottom:
+    1px solid
+    rgba(255,255,255,.1);
+
+}
+
+
+/* =========================================================
+   LEADER
+========================================================= */
+
+.rk-leader {
+
+  position:
+    relative;
+
+  min-height:
+    620px;
+
+  padding:
+    35px
+    45px
+    45px;
+
+  overflow:
+    hidden;
+
+  transition:
+    background .5s ease;
+
+}
+
+
+.rk-leader + .rk-leader {
+
+  border-left:
+    1px solid
+    rgba(255,255,255,.1);
+
+}
+
+
+.rk-leader:hover {
+
+  background:
+    #0c1013;
+
+}
+
+
+/* =========================================================
+   GIANT BACKGROUND TEXT
+========================================================= */
+
+.rk-leader-background {
+
+  position:
+    absolute;
+
+  right:
+    -20px;
+
+  bottom:
+    -35px;
+
+  font-family:
+    "Space Grotesk",
+    sans-serif;
+
+  font-size:
+    clamp(
+      100px,
+      15vw,
+      230px
+    );
+
+  font-weight:
+    700;
+
+  line-height:
+    .7;
+
+  letter-spacing:
+    -.09em;
+
+  color:
+    rgba(255,255,255,.025);
+
+  white-space:
+    nowrap;
+
+  pointer-events:
+    none;
+
+  transition:
+    transform .8s
+    cubic-bezier(.16,1,.3,1),
+    color .5s ease;
+
+}
+
+
+.rk-leader:hover
+.rk-leader-background {
+
+  transform:
+    translateX(-25px);
+
+  color:
+    rgba(217,255,63,.035);
+
+}
+
+
+/* =========================================================
+   TOP
+========================================================= */
+
+.rk-leader-top {
+
+  position:
+    relative;
+
+  z-index:
+    2;
+
+  display:
+    flex;
+
+  justify-content:
+    space-between;
+
+  font-size:
+    8px;
+
+  letter-spacing:
+    .16em;
+
+  color:
+    #656c72;
+
+}
+
+
+/* =========================================================
+   CONTENT
+========================================================= */
+
+.rk-leader-content {
+
+  position:
+    relative;
+
+  z-index:
+    2;
+
+  max-width:
+    520px;
+
+  margin-top:
+    115px;
+
+}
+
+
+.rk-leader-quote {
+
+  font-family:
+    Georgia,
+    serif;
+
+  font-size:
+    90px;
+
+  line-height:
+    .5;
+
+  color:
+    #d9ff3f;
+
+  opacity:
+    .75;
+
+}
+
+
+.rk-leader blockquote {
+
+  margin:
+    30px
+    0
+    65px;
+
+  font-family:
+    "Space Grotesk",
+    sans-serif;
+
+  font-size:
+    clamp(
+      22px,
+      2.2vw,
+      31px
+    );
+
+  line-height:
+    1.35;
+
+  letter-spacing:
+    -.025em;
+
+  color:
+    #dfe3e6;
+
+}
+
+
+/* =========================================================
+   PERSON
+========================================================= */
+
+.rk-leader-person {
+
+  display:
+    flex;
+
+  align-items:
+    center;
+
+  gap:
+    18px;
+
+}
+
+
+.rk-leader-avatar {
+
+  position:
+    relative;
+
+  width:
+    55px;
+
+  height:
+    55px;
+
+  display:
+    grid;
+
+  place-items:
+    center;
+
+  border:
+    1px solid
+    rgba(217,255,63,.3);
+
+  border-radius:
+    50%;
+
+  color:
+    #d9ff3f;
+
+  font-size:
+    11px;
+
+  letter-spacing:
+    .08em;
+
+}
+
+
+.rk-avatar-ring {
+
+  position:
+    absolute;
+
+  inset:
+    -7px;
+
+  border:
+    1px dashed
+    rgba(217,255,63,.15);
+
+  border-radius:
+    50%;
+
+  animation:
+    leaderOrbit
+    12s linear infinite;
+
+}
+
+
+@keyframes leaderOrbit {
+
+  from {
+    transform:
+      rotate(0deg);
+  }
+
+  to {
+    transform:
+      rotate(360deg);
+  }
+
+}
+
+
+.rk-leader-person h3 {
+
+  font-family:
+    "Space Grotesk",
+    sans-serif;
+
+  font-size:
+    15px;
+
+  font-weight:
+    500;
+
+  color:
+    #ffffff;
+
+}
+
+
+.rk-leader-person p {
+
+  margin-top:
+    5px;
+
+  font-size:
+    9px;
+
+  letter-spacing:
+    .12em;
+
+  color:
+    #858c92;
+
+  text-transform:
+    uppercase;
+
+}
+
+
+/* =========================================================
+   BOTTOM LINE
+========================================================= */
+
+.rk-leader-line {
+
+  position:
+    absolute;
+
+  left:
+    45px;
+
+  bottom:
+    45px;
+
+  width:
+    45px;
+
+  height:
+    1px;
+
+  background:
+    #d9ff3f;
+
+  transition:
+    width .5s
+    cubic-bezier(.16,1,.3,1);
+
+}
+
+
+.rk-leader:hover
+.rk-leader-line {
+
+  width:
+    100px;
+
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 850px) {
+
+  .rk-leadership {
+
+    padding:
+      110px
+      5vw
+      130px;
+
+  }
+
+
+  .rk-leadership-heading {
+
+    padding:
+      60px
+      0;
+
+  }
+
+
+  .rk-leadership-grid {
+
+    grid-template-columns:
+      1fr;
+
+  }
+
+
+  .rk-leader {
+
+    min-height:
+      540px;
+
+    padding:
+      30px;
+
+  }
+
+
+  .rk-leader + .rk-leader {
+
+    border-left:
+      0;
+
+    border-top:
+      1px solid
+      rgba(255,255,255,.1);
+
+  }
+
+
+  .rk-leader-content {
+
+    margin-top:
+      90px;
+
+  }
+
+
+  .rk-leader-line {
+
+    left:
+      30px;
+
+    bottom:
+      30px;
+
+  }
+
+}
+
+
+@media (max-width: 500px) {
+
+  .rk-leadership-top {
+
+    flex-direction:
+      column;
+
+    gap:
+      10px;
+
+  }
+
+
+  .rk-leader {
+
+    min-height:
+      500px;
+
+  }
+
+
+  .rk-leader blockquote {
+
+    margin-bottom:
+      50px;
+
+  }
+
+    }
