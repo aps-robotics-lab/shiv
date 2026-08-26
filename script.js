@@ -368,3 +368,71 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   });
 
 });
+/* =========================================================
+   3D HERO MOUSE PARALLAX
+========================================================= */
+
+const hero = document.querySelector(".hero");
+const heroContent = document.querySelector(".hero-content");
+const heroVideo = document.querySelector(".hero-video");
+
+if (
+  hero &&
+  heroContent &&
+  heroVideo &&
+  window.matchMedia("(pointer:fine)").matches
+) {
+
+  hero.addEventListener("mousemove", (event) => {
+
+    const rect = hero.getBoundingClientRect();
+
+    const x =
+      (event.clientX - rect.left) /
+      rect.width;
+
+    const y =
+      (event.clientY - rect.top) /
+      rect.height;
+
+
+    const rotateY =
+      (x - 0.5) * 4;
+
+    const rotateX =
+      (y - 0.5) * -3;
+
+
+    heroContent.style.transform =
+      `translate3d(
+        ${(x - 0.5) * -12}px,
+        ${(y - 0.5) * -8}px,
+        120px
+      )`;
+
+
+    heroVideo.style.transform =
+      `translate3d(
+        ${(x - 0.5) * 22}px,
+        ${(y - 0.5) * 15}px,
+        80px
+      )
+      translateY(-50%)
+      rotateX(${rotateX}deg)
+      rotateY(${rotateY}deg)`;
+
+  });
+
+
+  hero.addEventListener("mouseleave", () => {
+
+    heroContent.style.transform =
+      "translate3d(0,0,120px)";
+
+
+    heroVideo.style.transform =
+      "translate3d(0,0,80px) translateY(-50%)";
+
+  });
+
+}
