@@ -1,0 +1,918 @@
+/* =========================================================
+   ROBOkriti 2026
+   Interactive Events Arena
+========================================================= */
+
+.rk-events {
+
+  position: relative;
+
+  padding:
+    170px
+    5vw
+    180px;
+
+  background:
+    #07090b;
+
+  overflow: hidden;
+
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.rk-events-header {
+
+  max-width: 1440px;
+
+  margin: auto;
+
+}
+
+
+.rk-events-index {
+
+  padding-bottom: 16px;
+
+  border-bottom:
+    1px solid
+    rgba(255,255,255,.07);
+
+  font-size: 9px;
+
+  letter-spacing:
+    .18em;
+
+  color:
+    #858c92;
+
+}
+
+
+.rk-events-intro {
+
+  display: grid;
+
+  grid-template-columns:
+    .7fr 1.5fr .7fr;
+
+  align-items: end;
+
+  gap: 40px;
+
+  padding:
+    80px
+    0
+    75px;
+
+}
+
+
+.rk-events-eyebrow {
+
+  align-self: start;
+
+  font-size: 9px;
+
+  letter-spacing:
+    .16em;
+
+  color:
+    #d9ff3f;
+
+}
+
+
+.rk-events-intro h2 {
+
+  font-family:
+    "Space Grotesk",
+    sans-serif;
+
+  font-size:
+    clamp(
+      55px,
+      8vw,
+      115px
+    );
+
+  line-height:
+    .84;
+
+  letter-spacing:
+    -.075em;
+
+}
+
+
+.rk-events-intro h2 span {
+
+  color:
+    #737a80;
+
+}
+
+
+.rk-events-intro p {
+
+  max-width:
+    280px;
+
+  font-size:
+    13px;
+
+  line-height:
+    1.7;
+
+  color:
+    #858c92;
+
+}
+
+
+/* =========================================================
+   EVENT LIST
+========================================================= */
+
+.rk-event-list {
+
+  max-width:
+    1440px;
+
+  margin:
+    auto;
+
+  border-top:
+    1px solid
+    rgba(255,255,255,.1);
+
+}
+
+
+/* =========================================================
+   EVENT CARD
+========================================================= */
+
+.rk-event {
+
+  position:
+    relative;
+
+  min-height:
+    260px;
+
+  display:
+    grid;
+
+  grid-template-columns:
+    75px
+    330px
+    1fr
+    220px
+    55px;
+
+  align-items:
+    center;
+
+  gap:
+    30px;
+
+  padding:
+    25px
+    10px;
+
+  overflow:
+    hidden;
+
+  border-bottom:
+    1px solid
+    rgba(255,255,255,.1);
+
+  transition:
+    background .5s ease,
+    padding .5s cubic-bezier(.16,1,.3,1),
+    transform .5s cubic-bezier(.16,1,.3,1);
+
+}
+
+
+/* =========================================================
+   HOVER BACKGROUND
+========================================================= */
+
+.rk-event::before {
+
+  content:
+    "";
+
+  position:
+    absolute;
+
+  inset:
+    0;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(217,255,63,.035),
+      transparent 65%
+    );
+
+  opacity:
+    0;
+
+  transition:
+    opacity .5s ease;
+
+}
+
+
+.rk-event:hover::before {
+
+  opacity:
+    1;
+
+}
+
+
+.rk-event:hover {
+
+  padding-left:
+    30px;
+
+  padding-right:
+    30px;
+
+  background:
+    #0c1013;
+
+}
+
+
+/* =========================================================
+   NUMBER
+========================================================= */
+
+.rk-event-number {
+
+  position:
+    relative;
+
+  z-index:
+    2;
+
+  font-family:
+    "Space Grotesk",
+    sans-serif;
+
+  font-size:
+    12px;
+
+  color:
+    #656c72;
+
+}
+
+
+/* =========================================================
+   VISUAL
+========================================================= */
+
+.rk-event-visual {
+
+  position:
+    relative;
+
+  width:
+    230px;
+
+  height:
+    180px;
+
+  display:
+    grid;
+
+  place-items:
+    center;
+
+  overflow:
+    hidden;
+
+}
+
+
+/* TECH GRID */
+
+.rk-event-grid {
+
+  position:
+    absolute;
+
+  inset:
+    0;
+
+  background-image:
+
+    linear-gradient(
+      rgba(255,255,255,.045)
+      1px,
+      transparent 1px
+    ),
+
+    linear-gradient(
+      90deg,
+      rgba(255,255,255,.045)
+      1px,
+      transparent 1px
+    );
+
+  background-size:
+    25px 25px;
+
+  mask-image:
+    radial-gradient(
+      circle,
+      black,
+      transparent 70%
+    );
+
+  opacity:
+    .45;
+
+  transform:
+    perspective(500px)
+    rotateX(60deg)
+    scale(1.4);
+
+}
+
+
+/* ORBIT */
+
+.rk-event-orbit {
+
+  position:
+    absolute;
+
+  width:
+    125px;
+
+  height:
+    125px;
+
+  border:
+    1px solid
+    rgba(217,255,63,.18);
+
+  border-radius:
+    50%;
+
+  transform:
+    rotateX(65deg)
+    rotateZ(-15deg);
+
+  transition:
+    transform .8s
+    cubic-bezier(.16,1,.3,1),
+    border-color .4s ease;
+
+}
+
+
+.rk-event-orbit::before {
+
+  content:
+    "";
+
+  position:
+    absolute;
+
+  width:
+    5px;
+
+  height:
+    5px;
+
+  top:
+    7px;
+
+  left:
+    20px;
+
+  border-radius:
+    50%;
+
+  background:
+    #d9ff3f;
+
+  box-shadow:
+    0 0 15px
+    rgba(217,255,63,.8);
+
+}
+
+
+.rk-event:hover
+.rk-event-orbit {
+
+  transform:
+    rotateX(65deg)
+    rotateZ(25deg)
+    scale(1.15);
+
+  border-color:
+    rgba(217,255,63,.5);
+
+}
+
+
+/* CROSSHAIR */
+
+.rk-event-crosshair {
+
+  position:
+    relative;
+
+  z-index:
+    2;
+
+  width:
+    75px;
+
+  height:
+    75px;
+
+  display:
+    grid;
+
+  place-items:
+    center;
+
+  border:
+    1px solid
+    rgba(255,255,255,.15);
+
+  border-radius:
+    50%;
+
+  font-size:
+    22px;
+
+  font-weight:
+    300;
+
+  color:
+    #d9ff3f;
+
+  transition:
+    transform .5s
+    cubic-bezier(.16,1,.3,1),
+    background .4s ease;
+
+}
+
+
+.rk-event:hover
+.rk-event-crosshair {
+
+  transform:
+    rotate(90deg)
+    scale(1.08);
+
+  background:
+    rgba(217,255,63,.05);
+
+}
+
+
+/* =========================================================
+   CONTENT
+========================================================= */
+
+.rk-event-content {
+
+  position:
+    relative;
+
+  z-index:
+    2;
+
+}
+
+
+.rk-event-meta {
+
+  font-size:
+    8px;
+
+  letter-spacing:
+    .16em;
+
+  color:
+    #d9ff3f;
+
+}
+
+
+.rk-event-content h3 {
+
+  margin-top:
+    12px;
+
+  font-family:
+    "Space Grotesk",
+    sans-serif;
+
+  font-size:
+    clamp(
+      34px,
+      4vw,
+      58px
+    );
+
+  line-height:
+    .88;
+
+  letter-spacing:
+    -.06em;
+
+  font-weight:
+    600;
+
+}
+
+
+.rk-event-content h3 strong {
+
+  color:
+    #737a80;
+
+  font-weight:
+    600;
+
+}
+
+
+.rk-event-content p {
+
+  max-width:
+    500px;
+
+  margin-top:
+    16px;
+
+  font-size:
+    12px;
+
+  line-height:
+    1.7;
+
+  color:
+    #858c92;
+
+}
+
+
+/* =========================================================
+   COORDINATOR
+========================================================= */
+
+.rk-event-coordinator {
+
+  position:
+    relative;
+
+  z-index:
+    2;
+
+  font-size:
+    11px;
+
+  line-height:
+    1.5;
+
+  color:
+    #c2c7cc;
+
+}
+
+
+.rk-event-coordinator span {
+
+  display:
+    block;
+
+  margin-bottom:
+    7px;
+
+  font-size:
+    7px;
+
+  letter-spacing:
+    .16em;
+
+  color:
+    #656c72;
+
+}
+
+
+/* =========================================================
+   ARROW
+========================================================= */
+
+.rk-event-arrow {
+
+  position:
+    relative;
+
+  z-index:
+    2;
+
+  width:
+    43px;
+
+  height:
+    43px;
+
+  display:
+    grid;
+
+  place-items:
+    center;
+
+  border:
+    1px solid
+    rgba(255,255,255,.14);
+
+  border-radius:
+    50%;
+
+  font-size:
+    18px;
+
+  color:
+    #c2c7cc;
+
+  transition:
+    background .35s ease,
+    color .35s ease,
+    transform .5s
+    cubic-bezier(.16,1,.3,1);
+
+}
+
+
+.rk-event:hover
+.rk-event-arrow {
+
+  background:
+    #d9ff3f;
+
+  color:
+    #050607;
+
+  transform:
+    rotate(45deg);
+
+}
+
+
+/* =========================================================
+   DIFFERENT EVENT ACCENTS
+========================================================= */
+
+.rk-event[data-event="race"]
+.rk-event-orbit {
+
+  border-color:
+    rgba(217,255,63,.2);
+
+}
+
+
+.rk-event[data-event="war"]
+.rk-event-orbit {
+
+  border-color:
+    rgba(255,90,90,.18);
+
+}
+
+
+.rk-event[data-event="tug"]
+.rk-event-orbit {
+
+  border-color:
+    rgba(90,180,255,.18);
+
+}
+
+
+.rk-event[data-event="soccer"]
+.rk-event-orbit {
+
+  border-color:
+    rgba(190,120,255,.18);
+
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 1100px) {
+
+  .rk-event {
+
+    grid-template-columns:
+      55px
+      250px
+      1fr
+      50px;
+
+  }
+
+  .rk-event-coordinator {
+
+    display:
+      none;
+
+  }
+
+  .rk-event-visual {
+
+    width:
+      200px;
+
+  }
+
+}
+
+
+@media (max-width: 800px) {
+
+  .rk-events {
+
+    padding:
+      110px
+      5vw;
+
+  }
+
+
+  .rk-events-intro {
+
+    display:
+      block;
+
+    padding:
+      55px
+      0;
+
+  }
+
+
+  .rk-events-intro h2 {
+
+    margin-top:
+      22px;
+
+  }
+
+
+  .rk-events-intro p {
+
+    margin-top:
+      25px;
+
+  }
+
+
+  .rk-event {
+
+    grid-template-columns:
+      35px
+      1fr
+      42px;
+
+    min-height:
+      230px;
+
+    gap:
+      15px;
+
+  }
+
+
+  .rk-event-visual {
+
+    position:
+      absolute;
+
+    right:
+      -45px;
+
+    top:
+      25px;
+
+    width:
+      180px;
+
+    opacity:
+      .3;
+
+  }
+
+
+  .rk-event-content {
+
+    grid-column:
+      2;
+
+  }
+
+
+  .rk-event-number {
+
+    grid-column:
+      1;
+
+    align-self:
+      start;
+
+    padding-top:
+      5px;
+
+  }
+
+
+  .rk-event-arrow {
+
+    grid-column:
+      3;
+
+    grid-row:
+      1;
+
+  }
+
+}
+
+
+@media (max-width: 500px) {
+
+  .rk-event {
+
+    min-height:
+      250px;
+
+    padding:
+      25px
+      0;
+
+  }
+
+
+  .rk-event:hover {
+
+    padding-left:
+      10px;
+
+    padding-right:
+      10px;
+
+  }
+
+
+  .rk-event-content h3 {
+
+    font-size:
+      34px;
+
+  }
+
+
+  .rk-event-content p {
+
+    max-width:
+      260px;
+
+  }
+
+
+  .rk-event-visual {
+
+    right:
+      -70px;
+
+    opacity:
+      .22;
+
+  }
+
+}
