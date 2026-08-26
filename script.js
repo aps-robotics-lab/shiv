@@ -490,3 +490,51 @@ if (
   });
 
 }
+/* =========================================================
+   LEADERSHIP SCROLL REVEAL
+========================================================= */
+
+const leadershipElements = document.querySelectorAll(
+  ".rk-leader, .rk-leadership-heading"
+);
+
+if (leadershipElements.length) {
+
+  const leadershipObserver =
+    new IntersectionObserver(
+      (entries, observer) => {
+
+        entries.forEach((entry) => {
+
+          if (!entry.isIntersecting) return;
+
+          entry.target.classList.add(
+            "rk-leader-visible"
+          );
+
+          observer.unobserve(
+            entry.target
+          );
+
+        });
+
+      },
+      {
+        threshold: 0.15
+      }
+    );
+
+
+  leadershipElements.forEach((element) => {
+
+    element.classList.add(
+      "rk-leader-hidden"
+    );
+
+    leadershipObserver.observe(
+      element
+    );
+
+  });
+
+}
